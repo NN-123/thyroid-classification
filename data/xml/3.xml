@@ -1,0 +1,23 @@
+<case>
+    <number>3</number>
+    <age>31</age>
+    <sex>F</sex>
+    <composition>spongiform</composition>
+    <echogenicity>isoechogenicity</echogenicity>
+    <margins>well defined</margins>
+    <calcifications>microcalcifications</calcifications>
+    <tirads>4a</tirads>
+    <reportbacaf></reportbacaf>
+    <reporteco></reporteco>
+    <mark>
+        <image>1</image>
+        <svg>[{"points": [{"x": 332, "y": 144}, {"x": 342, "y": 142}, {"x": 350, "y": 141}, {"x": 363, "y": 137}, {"x":
+            366, "y": 128}, {"x": 360, "y": 110}, {"x": 349, "y": 100}, {"x": 345, "y": 94}, {"x": 334, "y": 87}, {"x":
+            328, "y": 85}, {"x": 322, "y": 82}, {"x": 310, "y": 79}, {"x": 303, "y": 76}, {"x": 300, "y": 76}, {"x":
+            291, "y": 76}, {"x": 285, "y": 76}, {"x": 275, "y": 79}, {"x": 267, "y": 84}, {"x": 258, "y": 87}, {"x":
+            253, "y": 96}, {"x": 252, "y": 104}, {"x": 248, "y": 116}, {"x": 247, "y": 124}, {"x": 245, "y": 133}, {"x":
+            260, "y": 152}, {"x": 292, "y": 156}, {"x": 305, "y": 154}, {"x": 310, "y": 152}, {"x": 332, "y": 147},
+            {"x": 333, "y": 147}], "annotation": {}, "regionType": "freehand"}]
+        </svg>
+    </mark>
+</case>
