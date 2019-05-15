@@ -9,17 +9,15 @@ import numpy as np
 path_to_data = os.path.join('.', 'data')
 path_to_jpg = os.path.join(path_to_data, 'jpg')
 path_to_preprocessed = os.path.join(path_to_data, 'preprocessed')
-filenames = os.listdir(path_to_jpg)
 
-image_height = 360
-image_width = 560
+image_height = 72
+image_width = 112
 binary_thresh = 3
 gaussian_sigma = 5
-slicing = (20, 25, -30, -25)
 
 
 def preprocess(image):
-    image = image[20:-30, 25:-25, :]
+    image = image[20:-25, 25:-25, :]
     assert isinstance(image, np.ndarray)
     grayscale = rgb2gray(image)
     grayscale = gaussian(grayscale, sigma=gaussian_sigma)
@@ -35,8 +33,10 @@ def preprocess(image):
     return (resize(extracted, (image_height, image_width)) * 255).astype(np.uint8)
 
 
-for filename in filenames:
-    im = io.imread(os.path.join(path_to_jpg, filename), as_gray=False)
-    processed = preprocess(im)
-    io.imsave(os.path.join(path_to_preprocessed, filename), processed)
-    print('Successfully processed %s' % filename)
+if __name__ == '__main__':
+    filenames = os.listdir(path_to_jpg)
+    for filename in filenames:
+        im = io.imread(os.path.join(path_to_jpg, filename), as_gray=False)
+        processed = preprocess(im)
+        io.imsave(os.path.join(path_to_preprocessed, filename), processed)
+        print('Successfully processed %s' % filename)
