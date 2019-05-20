@@ -11,9 +11,9 @@ path_to_jpg = os.path.join(path_to_data, 'raw_jpg')
 # path_to_preprocessed = os.path.join(path_to_data, 'preprocessed')
 # image_height = 72
 # image_width = 112
-path_to_preprocessed = os.path.join(path_to_data, 'inception')
-image_height = 300
-image_width = 300
+path_to_preprocessed = os.path.join(path_to_data, 'preprocessed')
+image_height = 128
+image_width = 128
 binary_thresh = 3
 gaussian_sigma = 5
 

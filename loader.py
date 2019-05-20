@@ -68,4 +68,4 @@ def make_dataset(data):
     test_labels = keras.utils.to_categorical([x['label'] for x in test], 2)
     test_images = np.array([x['image'] for x in test]).astype('float32') / 255
 
-    return train_images, train_labels, test_images, test_labels
+    return (train_images, train_labels), (test_images, test_labels)

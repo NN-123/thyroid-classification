@@ -230,3 +230,4 @@ dmypy.json
 
 /research/
 /inception/
+/*.ipynb

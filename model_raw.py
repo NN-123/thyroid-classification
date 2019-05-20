@@ -6,7 +6,7 @@ num_steps = 500
 display_steps = 10
 
 data = loader.load()
-train_images, train_labels, test_images, test_labels = loader.make_dataset(data)
+(train_images, train_labels), (test_images, test_labels) = loader.make_dataset(data)
 
 train = tf.data.Dataset.from_tensor_slices((train_images, train_labels))
 test = tf.data.Dataset.from_tensor_slices((test_images, test_labels))

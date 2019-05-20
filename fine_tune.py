@@ -2,7 +2,7 @@ from tensorflow import keras
 import loader
 
 data = loader.load('inception')
-train_x, train_y, test_x, test_y = loader.make_dataset(data)
+(train_x, train_y), (test_x, test_y) = loader.make_dataset(data)
 
 base_model = keras.applications.InceptionV3(weights='imagenet', include_top=False, input_shape=(300, 300, 3))
 dense = keras.layers.GlobalAveragePooling2D()(base_model.output)

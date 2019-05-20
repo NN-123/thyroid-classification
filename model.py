@@ -3,7 +3,7 @@ from tensorflow import keras
 import loader
 
 data = loader.load()
-train_images, train_labels, test_images, test_labels = loader.make_dataset(data)
+(train_images, train_labels), (test_images, test_labels) = loader.make_dataset(data)
 
 model = keras.Sequential([
     keras.layers.Conv2D(32, (3, 3),
@@ -12,12 +12,10 @@ model = keras.Sequential([
     keras.layers.MaxPool2D(pool_size=(2, 2)),
     keras.layers.Dropout(0.25),
 
-
     keras.layers.Conv2D(64, (3, 3), padding='SAME', activation=tf.nn.relu),
     keras.layers.Conv2D(64, (3, 3), activation=tf.nn.relu),
     keras.layers.MaxPool2D(pool_size=(2, 2)),
     keras.layers.Dropout(0.25),
-
 
     keras.layers.Flatten(),
     keras.layers.Dense(512, activation=tf.nn.relu),
