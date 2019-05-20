@@ -31,6 +31,3 @@ model.fit(train_images, train_labels,
           epochs=10,
           shuffle=True)
 model.evaluate(test_images, test_labels)
-
-model = keras.applications.InceptionV3()
-model = keras.Model()

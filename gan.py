@@ -79,15 +79,18 @@ class DCGAN():
         model.add(keras.layers.Conv2D(32, kernel_size=3, strides=2, input_shape=self.img_shape, padding="same"))
         model.add(keras.layers.LeakyReLU(alpha=0.2))
         model.add(keras.layers.Dropout(0.25))
+
         model.add(keras.layers.Conv2D(64, kernel_size=3, strides=2, padding="same"))
         model.add(keras.layers.ZeroPadding2D(padding=((0, 1), (0, 1))))
         model.add(keras.layers.BatchNormalization(momentum=0.8))
         model.add(keras.layers.LeakyReLU(alpha=0.2))
         model.add(keras.layers.Dropout(rate=0.25))
+
         model.add(keras.layers.Conv2D(128, kernel_size=3, strides=2, padding="same"))
         model.add(keras.layers.BatchNormalization(momentum=0.8))
         model.add(keras.layers.LeakyReLU(alpha=0.2))
         model.add(keras.layers.Dropout(rate=0.25))
+
         model.add(keras.layers.Conv2D(256, kernel_size=3, strides=1, padding="same"))
         model.add(keras.layers.BatchNormalization(momentum=0.8))
         model.add(keras.layers.LeakyReLU(alpha=0.2))
@@ -165,3 +168,4 @@ class DCGAN():
 if __name__ == '__main__':
     dcgan = DCGAN()
     dcgan.train(epochs=4000, batch_size=15, save_interval=50)
+
